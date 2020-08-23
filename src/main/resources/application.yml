@@ -1,0 +1,28 @@
+
+
+
+spring:
+  datasource:
+#    驱动可以不写，根据url自动判断
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/springcloud2020?useUnicode=true&characterEncoding=utf-8&useSSL=false\
+    &serverTimezone=GMT%2B8"
+    username: root
+    password: WF##(hle2wxEjWVIHVZJam7TS8OVlSGz8R8HJQzBLdRghwEoZnzdg2+Nd5cs8c59xYoW3)
+
+
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.wf.cache.domain
+
+
+jasypt:
+  encryptor:
+    bean: wfEncryptorBean
+    property:
+      prefix: WF##(
+      suffix: )
+
+logging:
+  level:
+    com.wf.cache: debug

@@ -9,6 +9,8 @@ spring:
     &serverTimezone=GMT%2B8"
     username: root
     password: WF##(hle2wxEjWVIHVZJam7TS8OVlSGz8R8HJQzBLdRghwEoZnzdg2+Nd5cs8c59xYoW3)
+  redis:
+    host: 192.168.200.160
 
 
 mybatis:
@@ -26,3 +28,5 @@ jasypt:
 logging:
   level:
     com.wf.cache: debug
+
+

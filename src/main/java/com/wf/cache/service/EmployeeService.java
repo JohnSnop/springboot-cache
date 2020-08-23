@@ -4,7 +4,9 @@ import com.wf.cache.dao.EmployeeMapper;
 import com.wf.cache.domain.Employee;
 import com.wf.cache.domain.EmployeeExample;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.*;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -22,6 +24,8 @@ public class EmployeeService {
 
     @Resource
     private EmployeeMapper employeeMapper;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     // @Cacheable(cacheNames = {"emp"}, condition = "#id > 0")
     // @Cacheable(cacheNames = {"emp"}, keyGenerator = "keyGenerator")

@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
 @MapperScan("com.wf.cache.dao")
-@EnableCaching // 开启缓存注解
+// @EnableCaching // 开启缓存注解
 public class SpringbootCacheApplication {
 
     public static void main(String[] args) {
